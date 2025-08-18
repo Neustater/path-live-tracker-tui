@@ -1,23 +1,23 @@
-PATH Train Terminal Tracker
+# PATH Train Terminal Tracker
 
 This is a Python terminal program that shows live PATH train arrival times.
 It uses the Port Authority PATH JSON feed and displays results in a text user interface (TUI) with the Rich library.
 
 ---
 
-Screenshots
+## Screenshots
 
-Main Menu
+### Main Menu
 
 ![Menu Screenshot](images/menu.png)
 
-Station Dashboard
+### Station Dashboard
 
 ![Dashboard Screenshot](images/dashboard.png)
 
 ---
 
-Features
+## Features
 
 - Fetches train arrival times from the PATH API.
 - Displays stations in a menu with numeric selection.
@@ -31,9 +31,9 @@ Features
 
 ---
 
-Install
+## Install
 
-Clone the repository and install dependencies:
+### Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/neustater/path-tracker.git
 cd path-tracker
@@ -42,13 +42,13 @@ pip install -r requirements.txt
 
 ---
 
-Run
+## Run
 
-Run the program:
+### Run the program:
 
 python path_tracker.py
 
-Usage Instructions:
+### Usage Instructions:
 
 - After running, a menu will appear listing all PATH stations.
 - Type the station number (e.g., 1) and press Enter to view train arrivals.
@@ -60,8 +60,8 @@ Usage Instructions:
 
 ---
 
-Data Source
+## Data Source
 
-Train data comes from:
+### Train data comes from:
 https://www.panynj.gov/bin/portauthority/ridepath.json
 

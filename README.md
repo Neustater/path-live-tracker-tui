@@ -1,6 +1,6 @@
 # PATH Train Terminal Tracker
 
-This is a Python terminal program that shows live PATH train arrival times.
+Python terminal program that shows live PATH train arrival times.
 It uses the Port Authority PATH JSON feed and displays results in a text user interface (TUI) with the Rich library.
 
 ---
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 ### Run the program:
 
-python path_tracker.py
+python path.py
 
 ### Usage Instructions:
 

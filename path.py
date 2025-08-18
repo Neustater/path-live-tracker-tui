@@ -29,6 +29,7 @@ head_sign_dict = {
     "Newark": "NWK",
     "Journal Square via Hoboken": "JSQ/HOB",
     "World Trade Center": "WTC",
+    "Journal Square": "JSQ"
 }
 
 
@@ -252,7 +253,7 @@ async def menu_loop():
                 match key:
                     case None:
                         pass
-                    case "\n":
+                    case "\n" | "\r" | "\r\n":
                         if selected_index.isdigit():
                             idx = int(selected_index)
                             async with response_lock:

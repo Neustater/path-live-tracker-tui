@@ -2,6 +2,7 @@
 
 Python terminal program that shows live PATH train arrival times.
 It uses the Port Authority PATH JSON feed and displays results in a text user interface (TUI) with the Rich library.
+This application makes use of TERMIOS and therefore only runs on POSIX compatible platforms (ie: MacOS, Linux, WSL)
 
 ---
 
@@ -37,6 +38,8 @@ It uses the Port Authority PATH JSON feed and displays results in a text user in
 ```bash
 git clone https://github.com/neustater/path-tracker.git
 cd path-tracker
+sudo python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -45,8 +48,9 @@ pip install -r requirements.txt
 ## Run
 
 ### Run the program:
-
+```bash
 python path.py
+```
 
 ### Usage Instructions:
 

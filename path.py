@@ -69,7 +69,7 @@ async def fetch_if_needed(caller: str):
             res = await asyncio.to_thread(requests.get, URL)
             res.raise_for_status()
             async with response_lock:
-                response_json = res.json()["results"]
+                response_json = res.json()['results']
                 last_fetch_time = now
         except Exception as e:
             console.log(f"[red]Error fetching data in {caller}: {e}[/red]")
@@ -104,10 +104,10 @@ async def build_dashboard(station_code):
 
     # Build a Panel for each station that matches the selection
     station_panels = []
-    async with response_lock:  # ✅ lock read
+    async with response_lock:
         local_response = response_json
     for station in local_response:
-        if station_code != "a" and station["consideredStation"] != station_code:
+        if station_code != "a" and station['consideredStation'] != station_code:
             continue
 
         # Create table for this heading (destination)
@@ -122,12 +122,10 @@ async def build_dashboard(station_code):
         sub_table.add_column("Destination")
         sub_table.add_column("ETA", justify="right")
 
-        for heading in station["destinations"]:
-            sub_table.add_row(
-                f"[{"#" + hashlib.sha256(heading["label"].encode()).hexdigest()[2:8]}]{heading["label"]}[/]"
-            )
+        for heading in station['destinations']:
+            sub_table.add_row(f"[#{hashlib.sha256(heading['label'].encode()).hexdigest()[2:8]}]{heading['label']}[/]")
 
-            for train in heading["messages"]:
+            for train in heading['messages']:
                 color_arr = (
                     train.get("lineColor", "").split(",")
                     if train.get("lineColor")
@@ -159,7 +157,7 @@ async def build_dashboard(station_code):
         station_panel = Panel(
             Align(sub_table, align="center", vertical="middle", pad=False),
             expand=True,
-            title=f"[bold #7197E3]{station["consideredStation"]}[/]",
+            title=f"[bold #7197E3]{station['consideredStation']}[/]",
             style="default",
             padding=(0, 0),
             box=box.ROUNDED,
@@ -213,7 +211,7 @@ def build_menu(response_json):
         show_header=False,
         header_style="bold",
         style="bold white",
-        row_styles=["white"],
+        row_styles=['white'],
         caption=selected_index,
         collapse_padding=True,
     )

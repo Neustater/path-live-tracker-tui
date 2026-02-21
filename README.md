@@ -33,12 +33,13 @@ This application makes use of TERMIOS and therefore only runs on POSIX compatibl
 ---
 
 ## Install
+Requires python 3.10 or greater
 
 ### Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/neustater/path-live-tracker-tui.git
 cd path-live-tracker-tui
-sudo python3 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -49,7 +50,7 @@ pip install -r requirements.txt
 
 ### Run the program:
 ```bash
-python path.py
+python3 path.py
 ```
 
 ### Usage Instructions:

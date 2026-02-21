@@ -36,7 +36,7 @@ This application makes use of TERMIOS and therefore only runs on POSIX compatibl
 
 ### Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/neustater/path-tracker.git
+git clone https://github.com/neustater/path-live-tracker-tui.git
 cd path-tracker
 sudo python3 -m venv .venv
 source .venv/bin/activate
